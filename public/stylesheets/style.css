@@ -1,6 +1,38 @@
-body {
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+.container {
+  display:flex;
+  min-height:auto;
+  min-width:auto;
+}
+
+html {
+  background-image: url(https://i.imgur.com/lG80zsQ.jpg);
+  background-position: center; 
+  background-repeat: no-repeat; 
+  background-size: cover; 
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  height: 500px; 
+}
+
+.bar {
+  background-color: rgb(172, 215, 242);
+}
+
+
+a {
+  margin-left: 35px;
+}
+
+li {
+  display:flex;
+  justify-content: space-between;
+  margin-right: 20px;
 }
 
 a {
