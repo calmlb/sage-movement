@@ -6,19 +6,25 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" type = "text/css" href="../stylesheets/style.css"  >
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="../public/javascripts/about.js"></script>
   </head>
   <body>
     <div class="navbar">
       <nav class="bar">
         <div class="nav-wrapper">
-          <a href class="left" class="brand-logo">Logo</a>
-          <ul class="right">
-            <li>About</li>
-            <li>Courses</li>
-            <li>Blog</li>
-            <li>Profile</li>
-            <li class="waves-effect waves-light btn-small" id="login">Login</li>
-          </ul>
+          <a href="" class="brand-logo left">Sage Movement</a>
+            <ul class="right">
+	              <li>About</li>
+                <li>Courses</li>
+                <li>Blog</li>
+                <li>Profile</li><li>
+              <% if (user) { %>
+	               	<a href="/logout"><i class="material-icons left">trending_flat</i>Log Out</a>
+	            <% } else { %>
+	               	<a href="/auth/google"><i class="material-icons left" >vpn_key</i>Login with Google</a>
+             	<% } %>
+              	</li>
+            </ul>
         </div>
       </nav>
     </div>

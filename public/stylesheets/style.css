@@ -4,6 +4,7 @@ html {
 *, *:before, *:after {
   box-sizing: inherit;
 }
+
 .container {
   display:flex;
   min-height:auto;
@@ -24,7 +25,6 @@ html {
   background-color: rgb(172, 215, 242);
 }
 
-
 a {
   margin-left: 35px;
 }
@@ -37,4 +37,14 @@ li {
 
 a {
   color: #00B7FF;
+}
+
+label {
+  display: block;
+  font: 1rem 'Fira Sans', sans-serif;
+}
+
+input,
+label {
+  margin: .4rem 0;
 }

@@ -1,0 +1,12 @@
+.container {
+    display:flex;
+}
+
+body {
+    background-image: url("images/sageMovementBackground.jpg");
+    height: 500px; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover; 
+
+}
