@@ -7,18 +7,19 @@
 </head>
 <body>
     <h2>Add A New Post</h2>
-    <form action="/addPost" method="POST">
-        <label>author:
-        <input type="text" name="author:">
+    <form action="/blog" method="POST">
+        <label> author:
+        <input type="text" name="author">
       </label><br>
       <label>title:
-        <input type="text" name="title:">
+        <input type="text" name="title">
       </label><br>
-      <label>postedOn:
-        <input type="text" name="postedOn:">
-      </label><br><br>
-      <input type="text" value="enter blog content here">
+      <input type="text" name="content" value="enter blog content here">
       <br>
+      <label>postedOn:
+        <input type="text" name="postedOn">
+      </label><br><br>
+     
       <input type="submit" value="post">
       <br>
       <br>

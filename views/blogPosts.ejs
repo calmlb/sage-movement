@@ -6,6 +6,14 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <% blogPost.forEach(function(p) { %>
+        <tr>
+            <td><%= p.image %></td>
+            <td><%= p.title %></td>
+            <td><%= p.author %></td>
+            <td><%= p.body %></td>
+            <td><%= p.postedOn %></td>
+        </tr>
+    <% }); %><br><br>
 </body>
 </html>
