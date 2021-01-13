@@ -18,14 +18,25 @@ function show (req, res) {
     })
 }
 
-function allPosts (req,res) {
+function allPosts (req, res) {
     blogPostModel.find({}, function(err, allPosts) {
         res.render('blog.ejs', {title: "All Posts", allPosts})
     })
 }
 
+async function deletePost (req, res) {
+    try {
+   const response = await blogPostModel.findByIdAndDelete(req.params.id)
+   console.log('response received')
+   res.redirect('/blog')
+    } catch (err) {
+        console.log(err)
+    }
+}
+
 module.exports = {
     newPost,
     allPosts,
-    show
+    show,
+    deletePost
 }

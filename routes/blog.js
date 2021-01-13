@@ -9,7 +9,8 @@ router.get('/addPost', function (req, res, next) {
   res.render('addPost.ejs')
 })
 router.get('/:id', blogCtrl.show)
-
 router.post('/', blogCtrl.newPost)
+// router.delete('/:id', blogCtrl.deletePost)
+
 
 module.exports = router;

@@ -5,6 +5,7 @@ var cookieParser = require('cookie-parser');
 var session = require('express-session');
 var passport = require('passport');
 var logger = require('morgan');
+var methodOverride = require('method-override');
 
 
 // load the env vars
@@ -44,6 +45,7 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(methodOverride('_method'));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
@@ -51,6 +53,7 @@ app.use('/about', aboutRouter);
 app.use('/blog', blogRouter);
 app.use('/courses', coursesRouter);
 app.use('/', commentsRouter);
+
 // app.use('/courses/live', liveCourseRouter);
 // app.use('/courses/onDemand', onDemandRouter);
 // app.use('/courses/workshops', workshopsRouter);

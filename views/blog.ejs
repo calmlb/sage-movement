@@ -20,6 +20,13 @@
     <p> <%= p.id %> </p>    
     </tr>
     <% }); %><br><br>
+    <% allPosts.forEach(function(p) { %>
+        <li>
+          <form action="//<%= p.id %>?_method=DELETE"
+            class="delete-form" method="POST">
+            <button type="submit">X</button>
+          </form>
+          <% }); %>
 
 </body>
 </html>
