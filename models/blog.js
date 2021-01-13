@@ -17,5 +17,19 @@ let postSchema = new mongoose.Schema({
     }
 })
 
+let commentSchema = new mongoose.Schema({
+        user: {
+            type: String
+        },
+        date: {
+            type: Date
+        },
+        id: {
+            type: String
+        },
+        postedBy: {
+            type: String
+        }
+})
 
 module.exports = mongoose.model('blogpost', postSchema);

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Blog Posts</title>
 </head>
 <body>
     <% allPosts.forEach(function(p) { %>
@@ -14,8 +14,12 @@
             <td><%= p.author %></td>
             <td><%= p.body %></td>
             <td><%= p.postedOn %></td>
+            <td><a href="/blog/<%= p.id %>">Detail</a></
+            td>
         </li>
-        </tr>
+    <p> <%= p.id %> </p>    
+    </tr>
     <% }); %><br><br>
+
 </body>
 </html>
