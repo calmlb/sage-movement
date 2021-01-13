@@ -1,7 +1,27 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
+let commentSchema = new mongoose.Schema({
+    
+    user: {
+        type: String
+        },
+        date: {
+            type: Date
+        },
+        content: {
+            type: String,
+            rating: {type: Number, min: 1, max: 5, default: 5}
+        },
+        id: {
+            type: String
+        },
+        postedBy: {
+            type: String
+        }
+})
 let postSchema = new mongoose.Schema({
+
         // image: String,
         author: {
             type: String
@@ -14,22 +34,8 @@ let postSchema = new mongoose.Schema({
         },
         postedOn: {
             type: Date,
-    }
-})
-
-let commentSchema = new mongoose.Schema({
-        user: {
-            type: String
         },
-        date: {
-            type: Date
-        },
-        id: {
-            type: String
-        },
-        postedBy: {
-            type: String
-        }
+        comments: [commentSchema]     
 })
 
 module.exports = mongoose.model('blogpost', postSchema);

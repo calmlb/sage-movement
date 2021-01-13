@@ -6,6 +6,7 @@ var session = require('express-session');
 var passport = require('passport');
 var logger = require('morgan');
 
+
 // load the env vars
 require('dotenv').config();
 // console.log(process.env.MYSECRET)
@@ -16,6 +17,8 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var aboutRouter = require('./routes/about');
 var blogRouter = require('./routes/blog');
+var commentsRouter = require('./routes/comments');
+
 // var blogPostsRouter = require('./routes/blog/blogPosts');
 var coursesRouter = require('./routes/courses');
 // var liveCourseRouter = require('./routes/courses/live');
@@ -46,8 +49,8 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/about', aboutRouter);
 app.use('/blog', blogRouter);
-// app.use('/blogPosts', blogPostsRouter);
 app.use('/courses', coursesRouter);
+app.use('/', commentsRouter);
 // app.use('/courses/live', liveCourseRouter);
 // app.use('/courses/onDemand', onDemandRouter);
 // app.use('/courses/workshops', workshopsRouter);

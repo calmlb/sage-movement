@@ -1,5 +1,4 @@
 const blogPostModel = require('../models/blog');
-// const blogCommentModel = require('../models/blog')
 
 function newPost (req, res) {
     blogPostModel.create(req.body, function(err, post) {
