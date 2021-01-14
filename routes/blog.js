@@ -10,5 +10,7 @@ router.post('/', blogCtrl.newPost)
 router.delete('/:id', blogCtrl.deletePost)
 router.delete('/:postid/commentDelete/:commentid', blogCtrl.deleteComment)
 
+router.put('/:id', blogCtrl)
+// router.put('/:postid/commentUpdate/:commentid', blogCtrl.updateComment)
 
 module.exports = router;

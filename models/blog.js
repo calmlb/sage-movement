@@ -6,7 +6,6 @@ let commentSchema = new mongoose.Schema({
     user: {
         type: String
         },
-        
         date: {
             type: Date
         },
@@ -14,7 +13,6 @@ let commentSchema = new mongoose.Schema({
             type: String,
             rating: {type: Number, min: 1, max: 5, default: 5}
         },
-        
         postedBy: {
             type: String
         }

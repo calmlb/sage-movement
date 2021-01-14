@@ -46,12 +46,15 @@ async function deleteComment (req, res) {
     console.log(result)
     await postOfInterest.save()
     res.redirect('/blog/' + postOfInterest.id)
-}
-      catch (err) {
+}   catch (err) {
           console.log(err)
           res.redirect('/blog/postid')
       }
   }
+
+async function updatePost (req, res) {
+  
+}
 
 
 
