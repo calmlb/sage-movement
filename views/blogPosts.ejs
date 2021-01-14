@@ -1,24 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" type = "text/css" href="../stylesheets/style.css"  >
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="../stylesheets/style.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="../public/javascripts/about.js"></script>
-</head>
-<body>
+  </head>
+  <body>
     <% blogPost.forEach(function(p) { %>
-        <tr>
-            <td><%= p.image %></td>
-            <td><%= p.title %></td>
-            <td><%= p.author %></td>
-            <td><%= p.body %></td>
-            <td><%= p.postedOn %></td>
-        </tr>
-    <% }); %><br><br>
-</body>
+    <tr>
+      <td><%= p.image %></td>
+      <td><%= p.title %></td>
+      <td><%= p.author %></td>
+      <td><%= p.body %></td>
+      <td><%= p.postedOn %></td>
+    </tr>
+    <% }); %><br /><br />
+  </body>
 </html>

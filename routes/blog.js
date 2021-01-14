@@ -1,16 +1,16 @@
-var express = require('express');
+var express = require("express");
 var router = express.Router();
 
-const blogCtrl = require('../controllers/blogPostCtrl');
+const blogCtrl = require("../controllers/blogPostCtrl");
 
-router.get('/', blogCtrl.allPosts)
-router.get('/addPost', blogCtrl.addPostForm)
-router.get('/:id', blogCtrl.show)
-router.post('/', blogCtrl.newPost)
-router.delete('/:id', blogCtrl.deletePost)
-router.delete('/:postid/commentDelete/:commentid', blogCtrl.deleteComment)
+router.get("/", blogCtrl.allPosts);
+router.get("/addPost", blogCtrl.addPostForm);
+router.get("/:id", blogCtrl.show);
+router.post("/", blogCtrl.newPost);
+router.delete("/:id", blogCtrl.deletePost);
+router.delete("/:postid/commentDelete/:commentid", blogCtrl.deleteComment);
 
-router.put('/:id', blogCtrl)
+router.put("/:id", blogCtrl.updatePost);
 // router.put('/:postid/commentUpdate/:commentid', blogCtrl.updateComment)
 
 module.exports = router;
