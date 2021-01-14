@@ -8,6 +8,7 @@ router.get('/addPost', blogCtrl.addPostForm)
 router.get('/:id', blogCtrl.show)
 router.post('/', blogCtrl.newPost)
 router.delete('/:id', blogCtrl.deletePost)
+router.delete('/:postid/commentDelete/:commentid', blogCtrl.deleteComment)
 
 
 module.exports = router;

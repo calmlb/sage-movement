@@ -30,13 +30,28 @@ function allPosts (req, res) {
 
 async function deletePost(req, res) {
   try {
-    const response = await blogPostModel.findByIdAndDelete(req.params.id);
-    console.log("response received");
-    res.redirect("/blog");
+    const response = await blogPostModel.findByIdAndDelete(req.params.id)
+    console.log("response received")
+    res.redirect("/blog")
   } catch (err) {
-    console.log(err);
+    console.log(err)
   }
 }
+
+async function deleteComment (req, res) {
+  try {
+    let postOfInterest = await blogPostModel.findById(req.params.postid)
+    console.log(postOfInterest)
+    let result = await postOfInterest.comments.id (req.params.commentid).remove();
+    console.log(result)
+    await postOfInterest.save()
+    res.redirect('/blog/' + postOfInterest.id)
+}
+      catch (err) {
+          console.log(err)
+          res.redirect('/blog/postid')
+      }
+  }
 
 
 
@@ -45,5 +60,6 @@ module.exports = {
     allPosts,
     show,
     deletePost,
-    addPostForm
+    addPostForm,
+    deleteComment
 }

@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" type = "text/css" href="../stylesheets/style.css"  >
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="../public/javascripts/about.js"></script>
 </head>
 <body>
     <%= post.author %>
@@ -11,11 +16,13 @@
     <%= post.content %>    
     <%= post.postedOn %>    
     <li>
+      <!-- form for delete-->
       <form method="POST" action="/blog/<%= post.id %>?_method=DELETE"
         class="delete-form" >
         <button type="submit">X</button>
         </form> <br>
         <br><br><h2>Comments</h2>
+        <!-- form for add Comment-->        
         <form id="add-comment-form" method="POST"
           action="/blog/<%=post.id %>/comments">
           <label>Comment:</label>
@@ -47,14 +54,17 @@
                     <td><%= c.content%></td>
                     <td><%= c.content.rating%></td>
                     <td><%= c.id %></td>
-                    <td><%= c.postedBy %></td>
+                    <td><%= c.postedBy %></td><br>
+                    <form method="POST" action="/blog/<%= post.id %>/commentDelete/<%= c.id %>?_method=DELETE"
+                      class="delete-form" >
+                      <button type="submit">X</button>
+                      </form>
                   </tr>
                 <% }); %>
               </tbody>
             </table>
           <% } else { %>
             <h5>No Comments Yet</h5>
-          <% } %>
-           
+          <% } %> 
 </body>
 </html>

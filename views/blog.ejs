@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog Posts</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" type = "text/css" href="../stylesheets/style.css"  >
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="../public/javascripts/about.js"></script>
 </head>
 <body>
     <% allPosts.forEach(function(p) { %>
@@ -14,19 +19,18 @@
             <td><%= p.author %></td>
             <td><%= p.body %></td>
             <td><%= p.postedOn %></td>
-            <td><a href="/blog/<%= p.id %>">Detail</a></
-            td>
+            <td><a href="/blog/<%= p.id %>">Detail</a>
+              <form action="/blog/<%= p.id %>?_method=DELETE"
+                class="delete-form" method="POST"> <br>
+                <button type="submit">X</button>
+              </form> 
+            </td>
         </li>
+        
     <p> <%= p.id %> </p>    
     </tr>
     <% }); %><br><br>
-    <% allPosts.forEach(function(p) { %>
-        <li>
-          <form action="//<%= p.id %>?_method=DELETE"
-            class="delete-form" method="POST">
-            <button type="submit">X</button>
-          </form>
-          <% }); %>
+          
 
 </body>
 </html>
