@@ -1,6 +1,5 @@
 const blogPostModel = require('../models/blog');
 
-
 function newPost (req, res) {
     blogPostModel.create(req.body, function(err, post) {
         if (err) {
@@ -9,6 +8,10 @@ function newPost (req, res) {
         res.redirect('/blog')
     }
     })
+}
+
+function addPostForm (req, res) {
+  res.render('addPost.ejs')
 }
 
 function show (req, res) {
@@ -25,14 +28,14 @@ function allPosts (req, res) {
     })
 }
 
-async function deletePost (req, res) {
-    try {
-   const response = await blogPostModel.findByIdAndDelete(req.params.id)
-   console.log('response received')
-   res.redirect('/blog')
-    } catch (err) {
-        console.log(err)
-    }
+async function deletePost(req, res) {
+  try {
+    const response = await blogPostModel.findByIdAndDelete(req.params.id);
+    console.log("response received");
+    res.redirect("/blog");
+  } catch (err) {
+    console.log(err);
+  }
 }
 
 
@@ -41,5 +44,6 @@ module.exports = {
     newPost,
     allPosts,
     show,
-    deletePost
+    deletePost,
+    addPostForm
 }

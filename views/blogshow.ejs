@@ -11,6 +11,10 @@
     <%= post.content %>    
     <%= post.postedOn %>    
     <li>
+      <form method="POST" action="/blog/<%= post.id %>?_method=DELETE"
+        class="delete-form" >
+        <button type="submit">X</button>
+        </form> <br>
         <br><br><h2>Comments</h2>
         <form id="add-comment-form" method="POST"
           action="/blog/<%=post.id %>/comments">
@@ -51,9 +55,6 @@
           <% } else { %>
             <h5>No Comments Yet</h5>
           <% } %>
-            <form method="POST" action="/blog/<%= post.id %>?_method=DELETE"
-            class="delete-form" >
-            <button type="submit">X</button>
-            </form>
+           
 </body>
 </html>
