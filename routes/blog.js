@@ -10,7 +10,7 @@ router.get('/addPost', function (req, res, next) {
 })
 router.get('/:id', blogCtrl.show)
 router.post('/', blogCtrl.newPost)
-// router.delete('/:id', blogCtrl.deletePost)
+router.delete('/:id', blogCtrl.deletePost)
 
 
 module.exports = router;

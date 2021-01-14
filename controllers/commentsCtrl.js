@@ -9,6 +9,17 @@ function create (req, res) {
      })
 }
 
+async function deleteComment (req, res) {
+    try {
+        const response = await blogPostModel.comments.findByIdAndDelete(req.params.id)
+        console.log('response received')
+        res.redirect('/blog/:id')
+    }   catch (err) {
+        console.log(err)
+    }
+}
+
 module.exports = {
-  create
+  create,
+  deleteComment
 };

@@ -1,12 +1,13 @@
 const blogPostModel = require('../models/blog');
 
+
 function newPost (req, res) {
     blogPostModel.create(req.body, function(err, post) {
         if (err) {
             res.send ("you've made an error")
         } else { 
         res.redirect('/blog')
-        }
+    }
     })
 }
 
@@ -33,6 +34,8 @@ async function deletePost (req, res) {
         console.log(err)
     }
 }
+
+
 
 module.exports = {
     newPost,

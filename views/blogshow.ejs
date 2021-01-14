@@ -51,8 +51,8 @@
           <% } else { %>
             <h5>No Comments Yet</h5>
           <% } %>
-            <form action="/blog/<%= post.id %>?_method=DELETE"
-            class="delete-form" method="POST">
+            <form method="POST" action="/blog/<%= post.id %>?_method=DELETE"
+            class="delete-form" >
             <button type="submit">X</button>
             </form>
 </body>
