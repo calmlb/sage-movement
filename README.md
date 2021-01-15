@@ -11,9 +11,10 @@ This game was created using HTML, CSS, and JavaScript, Express, Node.js, MongoDB
 -----------------------------------------------------------------------------------------------
 ### Screenshots
 -----------------------------------------------------------------------------------------------
-!(Site Image 1](Screen Shot 2021-01-15 at 8.59.48 AM.png)
-!(Site Image 2](Screen Shot 2021-01-15 at 8.59.54 AM.png)
-!(Site Image 3](Screen Shot 2021-01-15 at 8.59.59 AM.png)
+![Alt text](Screen Shot 2021-01-15 at 8.59.48 AM.png "About Me")
+![Alt text](Screen Shot 2021-01-15 at 8.59.48 AM.png "About Me")
+![Alt text](Screen Shot 2021-01-15 at 8.59.59 AM.png "About Me")
+
 
 Potential New Features & Dev Work
 ------------------------------------------------------------------------------------------------
