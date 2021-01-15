@@ -76,6 +76,8 @@ function editPost(req, res) {
     });
   }
 
+
+
   // res.redirect('/editPost.ejs')
 
   // blogPostModel.findById(req.params.id, function(err, post ) {
@@ -90,6 +92,6 @@ module.exports = {
   deletePost,
   addPostForm,
   deleteComment,
-  editPost,
+  editPost
   // updatePost
 };

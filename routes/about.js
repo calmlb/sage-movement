@@ -2,8 +2,8 @@ var express = require('express');
 var router = express.Router();
 
 /* GET users listing. */
-router.get('/', function(req, res, next) {
-  res.send('Julia Cowan and Sage Movement');
+router.get('/', function(req, res) {
+  res.render('about.ejs');
 });
 
 module.exports = router;
