@@ -32,5 +32,4 @@ Trello Board and Site Deployment
 ------------------------------------------------------------------------------------------------
 [Check out the site here:](https://sage-movements.herokuapp.com/)
 
-This project was written in VS Code.
- 
+This project was written in VS Code
