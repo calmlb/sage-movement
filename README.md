@@ -16,7 +16,7 @@ This game was created using HTML, CSS, and JavaScript, Express, Node.js, MongoDB
 -----------------------------------------------------------------------------------------------
 ![Alt text](https://i.imgur.com/Pdfj7k4.png)
 ![Alt text](https://i.imgur.com/7H3upPB.png)
-![Alt text](https://i.imgur.com/mudlM2B.png)
+![Alt text](https://i.imgur.com/jnM2c36.png)
 
 
 Potential New Features & Dev Work
