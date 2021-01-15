@@ -14,9 +14,9 @@ This game was created using HTML, CSS, and JavaScript, Express, Node.js, MongoDB
 -----------------------------------------------------------------------------------------------
 ### Screenshots
 -----------------------------------------------------------------------------------------------
-![Alt text](/sage-movement/Screen Shot 2021-01-15 at 8.59.48 AM.png "About Me")
-![Alt text](/sage-movement/Screen Shot 2021-01-15 at 8.59.48 AM.png "About Me")
-![Alt text](/sage-movement/Screen Shot 2021-01-15 at 8.59.59 AM.png "About Me")
+![Alt text](https://i.imgur.com/Pdfj7k4.png)
+![Alt text](https://i.imgur.com/7H3upPB.png)
+![Alt text](https://i.imgur.com/mudlM2B.png)
 
 
 Potential New Features & Dev Work
