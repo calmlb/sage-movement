@@ -29,7 +29,6 @@ Potential New Features & Dev Work
 Trello Board and Site Deployment
 ------------------------------------------------------------------------------------------------
 [Check out the Trello board here:](https://trello.com/invite/b/4yAGrFLU/8f6ffcd5ab96e50e4dfbd53d7d8a16bd/sei-project-2-sage-movement)
-------------------------------------------------------------------------------------------------
 [Check out the site here:](https://sage-movements.herokuapp.com/)
 
 This project was written in VS Code
