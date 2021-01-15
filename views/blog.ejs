@@ -1,27 +1,35 @@
 <%- include ./partials/header.ejs %>
 
+
+<div class="divider"></div>
+  <div class="section">
+    <h5>Title</h5>
     <% allPosts.forEach(function(p) { %>
-    <tr>
-      <li>
-        <td><%= p.title %></td>
-        <td><%= p.author %></td>
-        <td><%= p.body %></td>
-        <td><%= p.postedOn %></td>
-        <td><a href="/blog/<%= p.id %>">View Post</a></td>
+    <p><%= p.title %></p>
+  </div>
+  <div class="divider"></div>
+  <div class="section">
+    <h5>Author</h5>
+    <p><%= p.author %></p>
+  </div>
+  <div class="divider"></div>
+  <div class="section">
+    <h5>Post</h5>
+    <p><%= p.body %></p>
+    <td><a href="/blog/<%= p.id %>">View Post</a></td>
         <td>
           <a href="/blog/<%= p.id %>">Edit Post</a>
           <form
             action="/blog/<%= p.id %>?_method=DELETE"
             class="delete-form"
-            method="POST"
-          >
-            <br />
+            method="POST">
             <button type="submit">X</button>
-          </form>
-        </td>
-      </li>
-      <p><%= p.id %></p>
-    </tr>
-    <% }); %><br /><br />
+          </form><br/>
+  <div class="divider"></div>
+  <div class="section">
+    <h5>Posted On</h5>
+    <p><%= p.postedOn %></p>
+</div>
+<% }); %> <br /><br />
   </body>
 </html>
