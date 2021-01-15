@@ -1,6 +1,6 @@
 # sage-movement website
 
-![Site Image 2](https://i.imgur.com/mudlM2B.png)
+![Main Page Image](https://i.imgur.com/mudlM2B.png)
 
 
 
@@ -11,7 +11,9 @@ This game was created using HTML, CSS, and JavaScript, Express, Node.js, MongoDB
 -----------------------------------------------------------------------------------------------
 ### Screenshots
 -----------------------------------------------------------------------------------------------
-!(Site Image 2](https://i.imgur.com/mudlM2B.png)
+!(Site Image 1](Screen Shot 2021-01-15 at 8.59.48 AM.png)
+!(Site Image 2](Screen Shot 2021-01-15 at 8.59.54 AM.png)
+!(Site Image 3](Screen Shot 2021-01-15 at 8.59.59 AM.png)
 
 Potential New Features & Dev Work
 ------------------------------------------------------------------------------------------------
