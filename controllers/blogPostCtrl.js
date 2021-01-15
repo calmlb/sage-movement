@@ -54,11 +54,35 @@ async function deleteComment(req, res) {
   }
 }
 
-async function updatePost(req, res) {
-  let postToUpdate = await blogPostModel.findByIdAndUpdate(req.params.id);
-  console.log(postToUpdate);
-}
+function editPost(req, res) {
+  blogPostModel.findById(req.params.id, function (err, post) {
+    res.render("editPost.ejs", {
+      title: "Edit Post",
+      author,
+      content,
+      postedOn,
+    });
+  });
 
+  function updatePost(req, res) {
+    blogPostmodel.findById(req.params.id, function (err, post) {
+      post.author = req.body.newPost;
+      post.title = req.body.newTitle;
+      post.content = req.body.newContent;
+      post.postedOn = req.body.postedOn;
+      post.save(function (err) {
+        res.redirect("blogshow.ejs");
+      });
+    });
+  }
+
+  // res.redirect('/editPost.ejs')
+
+  // blogPostModel.findById(req.params.id, function(err, post ) {
+  //   if (!post.id.equals(req.params.id)) return res.redirect('/blog')
+  //   res.render('blogshow.ejs')
+  // })
+}
 module.exports = {
   newPost,
   allPosts,
@@ -66,5 +90,6 @@ module.exports = {
   deletePost,
   addPostForm,
   deleteComment,
-  updatePost,
+  editPost,
+  // updatePost
 };

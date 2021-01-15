@@ -1,0 +1,8 @@
+<%- include ./partials/header.ejs %>
+
+<form id="edit-post-form" method="PUT"
+          action="/blog/<%=post.id %>">
+          <label>Edit Post:</label>
+          <textarea name="enter text"></textarea>
+          <input type="submit" value="Add Comment">
+        </form>
